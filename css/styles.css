@@ -594,6 +594,8 @@ svg {
 .footer-form-disc {
   display: block;
 
+  margin-bottom: 20px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: calc(16 / 14);
@@ -602,6 +604,55 @@ svg {
 
   color: #ffffff;
 }
+
+.footer-form {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-input {
+  width: 358px;
+  height: 50px;
+
+  background-color: transparent;
+  padding-left: 16px;
+
+  color: var(--header-color);
+
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.footer-form-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  width: 200px;
+  height: 50px;
+
+  padding: 10px 25px;
+
+  border: none;
+  background-color: var(--action-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+
+  letter-spacing: 0.06em;
+
+  color: #ffffff;
+}
+
+.footer-form-icon {
+  fill: var(--header-color);
+}
+
 /* ------------------------ BACKDROP ---------------- */
 
 .backdrop {
