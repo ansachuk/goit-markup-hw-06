@@ -567,7 +567,36 @@
           <strong class="modal-strong">Залиште свої дані, ми вам передзвонимо</strong>
           <form method="get" class="modal-form" name="modal_form">
             <div class="modal-form-field">
-              
+              <div role="group" class="form-wrapper">
+                <label class="form-field-label"
+                  ><span class="input-label">Ім'я</span
+                  ><input class="form-field" type="text" name="username"
+                /></label>
+                <label class="form-field-label"
+                  ><span class="input-label">Телефон</span
+                  ><input class="form-field" type="tel" name="tel"
+                /></label>
+                <label class="form-field-label"
+                  ><span class="input-label">Пошта</span
+                  ><input class="form-field" type="email" name="email"
+                /></label>
+                <label class="form-field-label"
+                  ><span class="input-label">Коментар</span>
+                  <textarea
+                    class="form-field"
+                    name="feedback"
+                    id="feedback"
+                    placeholder="Введіть текст"
+                  ></textarea>
+                </label>
+              </div>
+              <div class="accept">
+                <input class="check-box" type="checkbox" name="accept-checkbox" id="accept-checkbox" />
+                <span class="check-input"></span> 
+                <label for="accept-checkbox"
+                  >Погоджуюся з розсилкою та приймаю <a href="#">Умови договору</a></label
+                >
+              </div>
             </div>
             <!-- ------------- MODAL ACCEPT BUTTON ------------  -->
             <button type="submit" class="modal-form-btn">Відправити</button>
