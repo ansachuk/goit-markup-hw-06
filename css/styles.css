@@ -623,6 +623,12 @@ svg {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+
+  transition: outline var(--anima-duration) var(--anima-function);
+}
+
+.footer-input:focus {
+  outline: 1px solid var(--action-color);
 }
 
 .footer-form-button {
@@ -647,6 +653,14 @@ svg {
   letter-spacing: 0.06em;
 
   color: #ffffff;
+
+  transition: background var(--anima-duration) var(--anima-function);
+}
+
+.footer-form-button:hover,
+.footer-form-button:focus {
+  background-color: #188ce8;
+  cursor: pointer;
 }
 
 .footer-form-icon {
@@ -666,6 +680,10 @@ svg {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
+
+  transition-property: visibility,opacity;
+  transition-duration: var(--anima-duration);
+  transition-timing-function: var(--anima-function);
 }
 
 .modal {
@@ -688,7 +706,6 @@ svg {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   width: 30px;
   height: 30px;
   background: #ffffff;
@@ -696,6 +713,17 @@ svg {
   border: 1px solid rgba(0, 0, 0, 0.1);
 
   cursor: pointer;
+}
+
+.modal-close {
+  fill: #000;
+
+  transition: fill var(--anima-duration) var(--anima-function);
+}
+
+.modal-btn:hover .modal-close,
+.modal-btn:focus .modal-close {
+  fill: var(--action-color);
 }
 
 .modal.modal-animation {
@@ -757,14 +785,29 @@ svg {
   top: 11px;
   left: 12px;
   /* transform: translatey(50%); */
+
+  fill: #000;
+}
+
+.form-field:focus + .field-icon {
+  fill: var(--action-color);
 }
 
 .form-field {
   height: 40px;
+  width: 448px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
   padding-left: 42px;
+  transition: border var(--anima-duration) var(--anima-function),
+    outline var(--anima-duration) var(--anima-function),
+    fill var(--anima-duration) var(--anima-function);
+}
+
+.form-field:focus {
+  border: 1px solid transparent;
+  outline: 1px solid var(--action-color);
 }
 
 textarea.form-field {
@@ -806,6 +849,8 @@ textarea.form-field {
   background-image: url(../images/homepage/checkbox/check-empty.svg);
   background-size: contain;
   background-repeat: no-repeat;
+
+  transition: background-image var(--anima-duration) var(--anima-function);
 }
 
 .check-box:checked + .check-input {
@@ -824,10 +869,6 @@ textarea.form-field {
   font-weight: 700;
   font-size: 16px;
   line-height: calc(30 / 16);
-  /* display: inline-flex;
-	/* align-items: center;
-	text-align: center; */
-
   letter-spacing: 0.06em;
 
   color: #ffffff;
@@ -837,6 +878,15 @@ textarea.form-field {
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+
+  transition:background-color var(--anima-duration) var(--anima-function);
+}
+
+.modal-form-btn:hover,
+.modal-form-btn:focus {
+  background-color: #188ce8;
+  border: none;
+  cursor: pointer;
 }
 
 .is-hidden {
