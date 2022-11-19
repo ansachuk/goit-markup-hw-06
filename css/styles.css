@@ -714,6 +714,8 @@ svg {
 	height: 40px;
 	border: 1px solid rgba(33, 33, 33, 0.2);
 	border-radius: 4px;
+
+	padding-left: 42px;
 }
 
 textarea.form-field {
