@@ -509,7 +509,7 @@ svg {
 
 .footer > .container {
   display: flex;
-  gap: 70px;
+ justify-content: space-between;
   align-items: baseline;
 }
 
@@ -765,6 +765,10 @@ svg {
   margin-bottom: 20px;
 }
 
+.form-wrapper:last-child{
+  margin-bottom: 0;
+}
+
 .input-label {
   font-size: 12px;
   line-height: calc(14 / 12);
@@ -795,7 +799,7 @@ svg {
 
 .form-field {
   height: 40px;
-  width: 448px;
+  width: 100%;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
@@ -826,7 +830,7 @@ textarea.form-field {
 .accept {
   position: relative;
   display: flex;
-
+  justify-content: center;
   margin-bottom: 30px;
 }
 
