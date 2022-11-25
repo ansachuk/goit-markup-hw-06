@@ -120,6 +120,37 @@ body {
   margin-right: 93px;
 }
 
+/* ___________________nav__________________ */
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  padding: 32px 0;
+}
+
+.nav__link {
+  color: var(--font-submain-color);
+  font-weight: 500;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+
+  transition-property: color;
+  transition-duration: var(--anima-duration);
+  transition-timing-function: var(--anima-function);
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  color: var(--action-color);
+}
+
 .logo__name--web {
   color: var(--action-color);
 }
@@ -142,46 +173,19 @@ body {
   border-radius: 2px;
 }
 
-/* ___________________nav__________________ */
-
-.nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.nav__list {
-  display: flex;
-  flex-direction: row;
-  gap: 50px;
-  padding: 32px 0;
-}
-
-.nav__list a {
-  color: var(--font-submain-color);
-  font-weight: 500;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.02em;
-
-  transition-property: color;
-  transition-duration: var(--anima-duration);
-  transition-timing-function: var(--anima-function);
-}
-
-.nav__list a:hover,
-.nav__list a:focus {
-  color: var(--action-color);
-}
-
 /* ____________contacts____________ */
 
-.contacts-list {
+.contacts {
   display: flex;
   flex-direction: row;
   gap: 50px;
 }
 
-.contacts-list a {
+.contacts__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   color: var(--font-main-color);
   font-weight: 500;
   line-height: calc(16 / 14);
@@ -192,18 +196,12 @@ body {
   transition-timing-function: var(--anima-function);
 }
 
-.contacts-list a:hover,
-.contacts-list a:focus {
+.contacts__link:hover,
+.contacts__link:focus {
   color: var(--action-color);
 }
 
-.contact-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.contact-icon {
+.contacts__icon {
   margin-right: 10px;
   fill: currentColor;
 
@@ -212,8 +210,8 @@ body {
   transition-timing-function: var(--anima-function);
 }
 
-.contact-icon:hover,
-.contact-icon:focus {
+.contacts__icon:hover,
+.contacts__icon:focus {
   fill: var(--action-color);
 }
 
