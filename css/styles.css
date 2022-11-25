@@ -84,13 +84,17 @@ body {
 }
 
 .invisible {
-  visibility: hidden;
   position: absolute;
+
   width: 1px;
   height: 1px;
-  margin: 0px;
+  overflow: hidden;
+
+  margin: -5px;
   border: 0;
   padding: 0;
+
+  clip: rect(0 0 0 0);
 }
 
 .section {
@@ -215,8 +219,10 @@ body {
   fill: var(--action-color);
 }
 
+/* -----------------------------main----------------------------- */
+
 /* -------------- Hero --------------*/
-.section.hero {
+.hero {
   padding: 200px 0;
 
   max-width: 1600px;
@@ -231,7 +237,7 @@ body {
   background-position: center;
 }
 
-.hero-title {
+.hero__title {
   margin: 0 auto 30px auto;
   padding: 0;
   color: var(--header-color);
@@ -245,7 +251,7 @@ body {
   width: 696px;
 }
 
-.hero-button {
+.button {
   min-width: 216px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -271,15 +277,13 @@ body {
   transition-timing-function: var(--anima-function);
 }
 
-.hero-button:hover,
-.hero-button:focus,
-.hero-button:active {
+.button:hover,
+.button:focus,
+.button:active {
   background-color: #188ce8;
   border: none;
   cursor: pointer;
 }
-
-/* -----------------------------main----------------------------- */
 
 /* -------------- advences ------------- */
 
@@ -287,7 +291,7 @@ body {
   padding-bottom: 0;
 }
 
-.advences.subtitle {
+.advences__subtitle{
   margin-bottom: 8px;
   font-size: 14px;
   line-height: calc(16 / 14);
@@ -295,19 +299,13 @@ body {
   text-transform: uppercase;
 }
 
-.advences-list {
+.advences__list {
   display: flex;
   flex-direction: row;
   gap: 30px;
 }
 
-.advences-list-item-p {
-  line-height: calc(24 / 14);
-  letter-spacing: 0.03em;
-  width: 270px;
-}
-
-.advences-item {
+.advences__image {
   height: 120px;
   background: #f5f4fa;
   border-radius: 4px;
@@ -318,9 +316,15 @@ body {
   justify-content: center;
 }
 
+.advences__description {
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  width: 270px;
+}
+
 /* ----------- WORKING --------- */
 
-.working.title,
+.working__title,
 .our-team-title {
   font-size: 36px;
   line-height: calc(42 / 36);
@@ -328,21 +332,21 @@ body {
   letter-spacing: 0.03em;
 }
 
-.working.title,
+.working__title,
 .our-team-title.title {
   margin-bottom: 50px;
 }
 
-.working-list {
+.working__list {
   display: flex;
   gap: 30px;
 }
 
-.working-thumb {
+.working__thumb {
   position: relative;
 }
 
-.working-description {
+.working__description {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -505,7 +509,7 @@ body {
   padding: 60px 0;
 }
 
-.footer>.container {
+.footer > .container {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -791,7 +795,7 @@ body {
   fill: #000;
 }
 
-.form-field:focus+.field-icon {
+.form-field:focus + .field-icon {
   fill: var(--action-color);
 }
 
@@ -860,7 +864,7 @@ textarea.form-field {
   transition: background-image var(--anima-duration) var(--anima-function);
 }
 
-.check-box:checked+.check-input {
+.check-box:checked + .check-input {
   background-image: url(../images/homepage/checkbox/icon-check.svg);
 }
 
